@@ -67,6 +67,20 @@
 
     $(this).on("change", filter);
     filter();
+
+    // Trigger re-layout when images finish loading to prevent overlapping items
+    $isotope.find('img').on('load', function() {
+      $isotope.isotope('layout');
+    }).each(function() {
+      if (this.complete) {
+        $(this).trigger('load');
+      }
+    });
+  });
+
+  // Trigger re-layout on window load as a fallback
+  $(window).on('load', function() {
+    $(".isotope-box").isotope('layout');
   });
 
   lightbox.option({
