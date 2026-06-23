@@ -219,3 +219,38 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+/* 5. Profile Picture (Sidebar Menu) Customizations */
+.menu .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.menu .image img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+.menu .image img:hover {
+    border-color: #a43f49;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 845px) {
+    .menu .image {
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    .menu .image img {
+        width: 110px;
+        height: 110px;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
