@@ -254,3 +254,139 @@
     }
 }
 
+/* 6. Education Timeline Customizations */
+.education-section h3 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 20px;
+}
+
+/* The vertical line in the middle */
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Individual timeline item container */
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+}
+
+/* The circle node on the timeline */
+.timeline-node {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 3;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Glow effect specifically for Telkom University */
+.timeline-node-glow {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 255, 255, 0.5), 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.timeline-node-dark-border {
+    border: 3px solid #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-node:hover {
+    transform: scale(1.05);
+}
+
+/* Logo and SVG styling inside the circle node */
+.timeline-logo {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
+}
+
+.timeline-svg {
+    width: 32px;
+    height: 32px;
+    color: #1a1a1a;
+}
+
+/* The card style below the node */
+.timeline-card {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-radius: 8px;
+    padding: 24px 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    z-index: 3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.timeline-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.timeline-subtitle {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.timeline-subtitle .text-muted {
+    color: #777777;
+    font-weight: 400;
+}
+
+.timeline-card .text-muted {
+    color: #777777;
+}
+
+.timeline-date {
+    font-size: 13.5px;
+    color: #888888;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
