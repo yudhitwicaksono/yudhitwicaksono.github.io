@@ -688,6 +688,16 @@
         menuIcon.removeClass('fa-times').addClass('fa-bars');
       });
 
+      // Close drawer when clicking outside
+      $(document).on('click', function (e) {
+        if (!$(e.target).closest('#mobile-drawer, #mobile-nav-toggle').length) {
+          if (drawer.hasClass('open')) {
+            drawer.removeClass('open');
+            menuIcon.removeClass('fa-times').addClass('fa-bars');
+          }
+        }
+      });
+
       // Smooth section scrolling and active state tracking
       var showSection = function (section) {
         var direction = section.replace(/#/, "");
